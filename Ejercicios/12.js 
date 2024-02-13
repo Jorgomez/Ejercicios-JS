@@ -1,0 +1,30 @@
+const duplicates = [
+  'sushi',
+  'pizza',
+  'burger',
+  'potatoe',
+  'pasta',
+  'ice-cream',
+  'pizza',
+  'chicken',
+  'onion rings',
+  'pasta',
+  'soda'
+]
+function removeDuplicates(param) {
+  for (let i = 0; i < param.length; i++) {
+    let iter1 = param[i]
+
+    for (let j = 1; j < param.length; j++) {
+      const iter2 = param[j]
+      if (iter1 === iter2) {
+        param.splice(param[j], 1)
+        j--
+      }
+    }
+  }
+
+  return param
+}
+
+console.log(removeDuplicates(duplicates))

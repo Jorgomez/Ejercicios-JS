@@ -1,0 +1,27 @@
+const counterWords = [
+  'code',
+  'repeat',
+  'eat',
+  'sleep',
+  'code',
+  'enjoy',
+  'sleep',
+  'code',
+  'enjoy',
+  'upgrade',
+  'code'
+]
+
+function finderWord(array) {
+  const counter = {}
+  for (let i = 0; i < array.length; i++) {
+    if (counter[array[i]] >= 1) {
+      counter[array[i]]++
+    } else {
+      counter[array[i]] = 1
+    }
+  }
+  return counter
+}
+
+console.log(finderWord(counterWords))
